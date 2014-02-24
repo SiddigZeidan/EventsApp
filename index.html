@@ -5,70 +5,39 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>AngularJS Introduction</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
         <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
         <script src="js/angular.min.js" type="text/javascript"></script>
         <script src="js/geolocation.js" type="text/javascript"></script>
         <script src="js/my_angular.js" type="text/javascript"></script>
-
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <style>
-	body{
-		color: #fff;
-		background: linear-gradient(#544, #565);
-	}
-	.info a {
-		color: #f2f2f2;
-	}
-	li{
-	border: 5px solid #CCCCCC ;
-	border-radius:15px;
-	list-style-type: none;
-	padding-left: 50px;
-	margin-bottom: 10px;
+
 	
-}
-.title{
-	text-align: center;
-	margin-bottom: 50px;
-}
 
-.filters{
-	text-align: center;
-}
-
-.search{
-	width: 20%;
-}
-
-span{
-	text-decoration: underline;
-}
-
-.images{
-	float: right;
-
-}
     </style>
 </head>
 <body ng-app="myApp">
-<div ng-controller="mainCtrl" >
+<div ng-controller="mainCtrl" style="text-align: center; " >
  <h2>Your location is {{city}} , {{country}}</h2> 
    
 
       <div data-ng-controller="mainCtrl">
-	<h3>Total Number of Coins : {{coinList.length}}</h3> 
+	<h3>Total Number of Events : {{eventList.length}}</h3> 
     </div>
+<div class="row">
+    <ul id="rb-grid" class="rb-grid clearfix">
+    	<li ng-repeat="event in  eventList">
+  <!--   <img ng-src="{{coin.image}}" alt=""> -->
+    <h4>{{event.title}}</h4>
 
-    <ul>
-    	<li ng-repeat="coin in  coinList">
-     <img ng-src="{{coin.image}}" alt="">
-    <h3>{{coin.title}}</h3>
-
-    <h3>{{coin.address}}</h3>
-  <h3>Website:<a href="{{coin.url}}"><h3> {{coin.url}}</h3></a></h3>
+    <h4>{{event.address}}</h4>
+  <h4><a href="{{event.url}}"><h4> Website </h4></a></h4>
   
-  <a href="{{coin.ticket}}"> <button >Purchase ticket</button></a>
+  <a href="{{event.ticket}}"> <button class="btn-info">Purchase ticket</button></a>
     </li>
     </ul>
+    </div>
      </div>
     </body>
     

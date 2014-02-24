@@ -18,8 +18,8 @@ var events = angular.module('myApp',['geolocation'])
              success: function(data){
                 $scope.$apply(function(){ //necessary to $apply the changes
                     
-                    $scope.coinList = data.result;
-                    console.log($scope.coinList);
+                    $scope.eventList = data.result;
+                    console.log($scope.eventList);
                     $scope.city = city;
                     $scope.country = country;
                     

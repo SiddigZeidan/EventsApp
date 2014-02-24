@@ -1,0 +1,78 @@
+body{
+		color: #333;
+		background: linear-gradient(#fff, #f2f2f2);
+	}
+	.info a {
+		color: #f2f2f2;
+	}
+	li{
+
+	list-style-type: none;
+	padding-left: 50px;
+	margin-bottom: 10px;
+	
+}
+.title{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.filters{
+	text-align: center;
+}
+
+.search{
+	width: 20%;
+}
+
+span{
+	text-decoration: underline;
+}
+
+.images{
+	float: right;
+
+}
+
+.rb-grid {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.rb-grid li {
+    width: 24%;
+    height: 15em;
+    margin: 0.5%;
+    background: #8CC7DF;
+    color: #fff;
+    display: block;
+    float: left;
+    padding: 1.6em;
+   
+    position: relative;
+}
+
+.rb-grid li:nth-child(3n+3){
+	width: 24%;
+}
+
+
+
+.rb-grid li:nth-child(1n+12) { background: #3399CC; }
+.rb-grid li:nth-child(2n+13) { background: #33CCCC; }
+.rb-grid li:nth-child(3n+14) { background: #996699; }
+.rb-grid li:nth-child(4n+15) { background: #C24747; }
+.rb-grid li:nth-child(5n+16) { background: #e2674a; }
+.rb-grid li:nth-child(1) { background: #3399CC; }
+.rb-grid li:nth-child(2) { background: #33CCCC; }
+.rb-grid li:nth-child(3) { background: #996699; }
+.rb-grid li:nth-child(4) { background: #C24747; }
+.rb-grid li:nth-child(5) { background: #e2674a; }
+.rb-grid li:nth-child(6) { background: #FFCC66; }
+.rb-grid li:nth-child(7) { background: #99CC99; }
+.rb-grid li:nth-child(8) { background: #669999; }
+.rb-grid li:nth-child(9) { background: #CC6699; }
+.rb-grid li:nth-child(10) { background: #339966; }
+.rb-grid li:nth-child(11) { background: #666699; }
+  
