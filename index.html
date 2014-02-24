@@ -12,17 +12,23 @@
       <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
    </head>
    <body ng-app="myApp">
-      <div ng-controller="mainCtrl" style="text-align: center; " >
-         <div class = "inputinfo">
+      <div ng-controller="mainCtrl" style="text-align: center; " class="container" >
+
+
+         <div class = "inputinfo" class="col-md-6 .col-md-offset-3">
             <h2>Events</h2>
             <h4>If your city and country are not automatically detected, please manually insert the city and the 2 digit code for the country. 2 digit codes for each country can be found <a href="http://www.worldatlas.com/aatlas/ctycodes.htm">here</a></h4>
             <label>Country </label> <br> <input type="text" ng-model = "new_country">
             <br>
+
             <label>City </label><br> <input type="text" ng-model = "new_city">
             <h2>Your location is {{city}} , {{country}}</h2>
             <br>
-            <button ng-click="add()">Confirm</button>
+               <div id="loading" style="text-align: center; ">  </div>
+               <br>
+            <button ng-click="add()" class="btn-success">Confirm</button>
             <h3>Total Number of Events : {{eventList.length}}</h3>
+
          </div>
          <div class="row">
             <ul id="rb-grid" class="rb-grid clearfix">

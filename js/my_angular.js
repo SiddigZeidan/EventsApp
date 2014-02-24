@@ -10,11 +10,13 @@ var events = angular.module('myApp',['geolocation'])
         var city = response.city;
         var country = response.country;
         console.log (city, country);
+        $("#loading").show();
+
 
    $scope.add = function  () {
                         city = $scope.new_city;
                        country = $scope.new_country;
-                       
+                          $("#loading").show();
                     console.log (city, country)
                     $.ajax({
             type : 'GET',
@@ -23,12 +25,15 @@ var events = angular.module('myApp',['geolocation'])
             url: 'https://hypecal-events.p.mashape.com/search.json?key=%3Ckey%3E&city=' + city + '&country=' + country + '&limit=30',
             data: {},
              success: function(data){
+               $("#loading").hide();    
                 $scope.$apply(function(){ //necessary to $apply the changes
                     console.log(city);
                     $scope.eventList = data.result;
                     console.log($scope.eventList);
                     $scope.city = city;
                     $scope.country = country;
+
+
                     
                 });
             },
@@ -42,13 +47,16 @@ var events = angular.module('myApp',['geolocation'])
 $scope.new_city = "";
                        $scope.new_country = "";
                     };
+     
      $.ajax({
             type : 'GET',
             dataType : 'json',
             contentType: "application/json; charset=utf-8",
             url: 'https://hypecal-events.p.mashape.com/search.json?key=%3Ckey%3E&city=' + city + '&country=' + country + '&limit=30',
+           
             data: {},
              success: function(data){
+                 $("#loading").hide(); 
                 $scope.$apply(function(){ //necessary to $apply the changes
                     console.log(city);
                     $scope.eventList = data.result;
